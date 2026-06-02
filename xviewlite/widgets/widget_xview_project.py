@@ -616,6 +616,7 @@ class UIXviewProject(*uic.loadUiType(ui_path)):
 
                 merged = XASDataSet(name=merged_name, energy=energy_master, mu=mu_merged, filename='',
                                                datatype='processed', ext_data=ext_data_merged)#, df=df)
+                merged.header=".join(merged_files_string)
 
 
                 self.parent.project.append(merged)
